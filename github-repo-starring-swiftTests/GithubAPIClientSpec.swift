@@ -76,7 +76,7 @@ class GithubAPIClientSpec: QuickSpec {
                     
                 }) { (request) -> OHHTTPStubsResponse in
                     return OHHTTPStubsResponse(fileAtPath: OHPathForFileInBundle("not_starred.json", NSBundle(forClass: self.dynamicType))!, statusCode: 404, headers: ["Content-Type" : "application/json"])
-
+                    
                 }
                 waitUntil(action: { (done) in
                     GithubAPIClient.checkIfRepositoryIsStarred("wycats/merb-core", completion: { (starred) in
@@ -102,10 +102,5 @@ class GithubAPIClientSpec: QuickSpec {
                 })
             }
         }
-        
-            
-            
-        
-        
     }
 }

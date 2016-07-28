@@ -25,5 +25,4 @@ class GithubRepository {
         fullName = name
         repositoryID = repoID
     }
-    
 }

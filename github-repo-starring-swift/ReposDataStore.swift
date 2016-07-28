@@ -24,8 +24,9 @@ class ReposDataStore {
                 self.repositories.append(repository)
                 
             }
+            
             completion()
         }
     }
-
+    
 }

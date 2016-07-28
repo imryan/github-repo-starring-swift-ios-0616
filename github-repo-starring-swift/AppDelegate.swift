@@ -39,7 +39,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 else {
                     return OHHTTPStubsResponse(fileAtPath: OHPathForFileInBundle("not_starred.json", NSBundle(forClass: self.dynamicType))!, statusCode: 404, headers: ["Content-Type" : "application/json"])
                 }
-                
             }
             
             //stubbing PUT/DELETE star
@@ -52,8 +51,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 return OHHTTPStubsResponse(data: NSData(), statusCode: 204, headers: nil)
             }
         }
-        
-        
         
         return true
     }
